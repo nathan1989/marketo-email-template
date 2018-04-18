@@ -1,0 +1,48 @@
+{#
+    Text block header w/image
+#}
+
+{% macro textBlockHeaderImage(id, hidden = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="Text block heading with image" mktoAddByDefault="true">
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+            <tr>
+                <td class="text-block-header-image">
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="heading-section">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    <tr>
+                                        <td class="header-wrap">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                                <tr>
+                                                    <td class="body-text heading-td h1 heading">Here,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="subheading-td">
+                                                        <span class="body-text for">for</span>&nbsp;&nbsp;<span class="body-text h1 text-block-subheading">you.</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" class="line">
+                                                <tr><td class="line-gap"></td></tr>
+                                                <tr>
+                                                    <td class="line-width"></td>
+                                                    <td class="line-td"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="image-wrap">
+                                <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/here-for-you.png" class="mktoImg display-block" id="{{ id }}-image" mktoName="Image">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

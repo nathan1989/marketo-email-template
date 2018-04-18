@@ -1,0 +1,19 @@
+{#
+    Arrow button
+#}
+{% macro arrowButton(orientation, id, thisId) %}
+<table cellpadding="0" cellspacing="0" border="0" align="{{ orientation }}">
+    <tr>
+        <td class="mktoText" id="{{ id }}{% if thisId %}-{{ thisId }}{% endif %}-arrow-button" mktoname="Arrow button">
+            <a href="#" class="button-link">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="read-more"><font>Read more</font></td>
+                        <td class="read-more-arrow"><img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/arrow-theme-3.png"></td>
+                    </tr>
+                </table>
+            </a>
+        </td>
+    </tr>
+</table>
+{% endmacro %}

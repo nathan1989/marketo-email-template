@@ -1,0 +1,40 @@
+.signature-module {
+    padding: 20px 0;
+    @media (max-width: $body-max-width) {
+        padding: 15px 0!important;
+    }
+}
+
+.signature-avatar {
+    padding-right: 32px;
+    @media (max-width: $body-max-width) {
+        padding-right: 15px!important;
+        width: 80px!important;
+        img {
+            width: 80px!important;
+            height: 80px!important;
+        }
+    }
+}
+
+.signature-text {
+    font-size: 16px;
+    color: #7D7D7D;
+    vertical-align: middle;
+    @media (max-width: $body-max-width) {
+        font-size: 14px!important;
+    }
+
+    .from-name {
+        font-weight: bold;
+        font-size: 20px;
+        color: #333333!important; // override theme changes
+        letter-spacing: -0.06px;
+        @media (max-width: $body-max-width) {
+            font-size: 18px!important;
+            color: #333333!important;
+            letter-spacing: -0.05px!important;
+            line-height: 20px!important;
+        }
+    }
+}

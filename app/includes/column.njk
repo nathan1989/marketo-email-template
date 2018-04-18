@@ -1,0 +1,186 @@
+{# 
+    Columns
+#}
+{% macro column(columns, id, hasColumnImages = false, hasBannerImage = false, hasBtn = false, btnAlignment = 'left', hidden = false, bgColor = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td class="column-wrapper">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width column{% if bgColor %} column-bg{% endif %}">
+            {% if hasBannerImage %}
+                <tr>
+                    <td class="column-image-wrapper column-banner-wrapper">
+                        <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/column-full-width.png" alt="" class="mktoImg display-block" id="{{ id }}-image" mktoname="Image" width="560">
+                    </td>
+                </tr>
+            {% endif %}
+            <tr>
+                <td> 
+                    {% if columns == 1 %}
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="body-text-small one-col">
+                                <span class="mktoText" id="{{ id }}-text" mktoname="Text">
+                                Cras viverra condimentum malesuada. Nunc a lectus eu lectus laoreet auctor vel vitae massa. Etiam nec diam in lorem convallis auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce laoreet quis urna sed varius. Suspendisse iaculis libero ultricies dolor scelerisque, eu dapibus erat semper.
+                                <br><br>
+                                Cras aliquet ex nunc. Cras posuere vulputate luctus. Proin faucibus tristique lobortis. Sed semper nulla ut lorem lacinia, non eleifend quam venenatis. Donec at nulla nunc. Sed feugiat turpis quis nulla commodo condimentum. Fusce venenatis, erat sit amet lacinia viverra, tellus mauris pharetra quam.
+                                </span>
+                            </td>
+                        </tr>
+                        {% if hasBtn %}
+                        <tr>
+                            <td class="padding-top-half one-col">
+                                <table cellpadding="0" cellspacing="0" border="0" align="{{ btnAlignment }}">
+                                    <tr>
+                                    <td valign="middle" class="mktoText body text-center button" id="{{ id }}-button" mktoname="Button">
+                                        <a href="#" class="button-link">
+                                        <span class="button-link-inner">
+                                            <font>
+                                            More information
+                                            </font>
+                                        </span>
+                                        </a>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        {% endif %}
+                    </table>
+                                            
+                    {% elif columns == 2  %}
+                    <table cellpadding="0" cellspacing="0" border="0" class="body-text-small full-width column-grid">
+                        <tr>
+                            <td class="two-col-left">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    {% if hasColumnImages %}
+                                    <tr>
+                                        <td class="column-image-wrapper">
+                                            <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/two-column-left.png" alt="" width="244" height="180" class="mktoImg" id="{{ id }}-image-left" mktoname="Image">
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="mktoText body-text-small column-text-wrapper" id="{{ id }}-text-left" mktoname="Text left">
+                                            At Fidelity Life, our purpose is to protect the New Zealand way of life, your way of life. How to protect your lifestyle is the most important decisions you'll ever make. We know you want to get this right. How to protect your lifestyle is one of the most important decisions you'll ever make.
+                                        </td>
+                                    </tr>
+                                    {% if hasBtn %}
+                                    <tr>
+                                        <td class="column-button-wrapper">                                            
+                                            {% import "includes/border-button.njk" as button %}
+                                            {{ button.borderButton('left', id, 'text-left') }}
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </table>                                
+                            </td>
+                            <td class="two-col-right">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    {% if hasColumnImages %}
+                                    <tr>
+                                        <td class="column-image-wrapper">
+                                            <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/two-column-right.png" alt="" width="244" height="180" class="mktoImg" id="{{ id }}-image-right" mktoname="Image">
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="mktoText body-text-small column-text-wrapper" id="{{ id }}-text-right" mktoname="Text right">
+                                            Your adviser will work closely with you to understand your needs and personal circumstances. Your insurance should suit the way you live and what you want it to achieve should you ever need to call on it.
+                                        </td>
+                                    </tr>
+                                    {% if hasBtn %}
+                                    <tr>
+                                        <td class="column-button-wrapper">                                            
+                                            {% import "includes/border-button.njk" as button %}
+                                            {{ button.borderButton('left', id, 'text-right') }}
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </table>                                
+                            </td>
+                        </tr>
+                    </table>
+                    {% elif columns == 3  %}
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width column-grid">
+                        <tr>
+                            <td class="three-col-left">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    {% if hasColumnImages %}
+                                    <tr>
+                                        <td class="column-image-wrapper">
+                                            <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/three-column-left.png" alt="" width="152" height="112" class="mktoImg" id="{{ id }}-image-left" mktoname="Image">
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="mktoText body-text-small column-text-wrapper" id="{{ id }}-text-left" mktoname="Text left">
+                                            How to protect your lifestyle is one of the most important decisions you'll ever make. We know you want to get this right. How to protect your lifestyle is one of the most important decisions you'll ever make. We know you want to get this right.
+                                        </td>
+                                    </tr>
+                                    {% if hasBtn %}
+                                    <tr>
+                                        <td class="column-arrow-button-wrapper">
+                                            {% import "includes/arrow-button.njk" as link %}
+                                            {{ link.arrowButton(orientation, id, 'text-left') }}
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </table>
+                            </td>
+                            <td class="three-col-center">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    {% if hasColumnImages %}
+                                    <tr>
+                                        <td class="column-image-wrapper" id="{{ id }}-text-middle" mktoname="Text middle">
+                                            <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/three-column-center.png" alt="" width="152" height="112" class="mktoImg" id="{{ id }}-image-middle" mktoname="Image">
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="mktoText body-text-small column-text-wrapper" id="{{ id }}-text-middle" mktoname="Text right">
+                                            How to protect your lifestyle is one of the most important decisions you'll ever make. We know you want to get this right.
+                                        </td>
+                                    </tr>
+                                    {% if hasBtn %}
+                                    <tr>
+                                        <td class="column-arrow-button-wrapper">
+                                            {% import "includes/arrow-button.njk" as link %}
+                                            {{ link.arrowButton(orientation, id, 'text-middle') }}
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </table>
+                            </td>
+                            <td class="three-col-right">
+                                <table cellpadding="0" cellspacing="0" border="0" class="body-text-small full-width">
+                                    {% if hasColumnImages %}
+                                    <tr>
+                                        <td class="column-image-wrapper">
+                                            <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/three-column-right.png" alt="" width="152" height="112" class="mktoImg" id="{{ id }}-image-right" mktoname="Image">
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="mktoText body-text-small column-text-wrapper" id="{{ id }}-text-right" mktoname="Text right">
+                                            How to protect your lifestyle is one of the most important decisions you'll ever make. We know you want to get this right.
+                                        </td>
+                                    </tr>
+                                    {% if hasBtn %}
+                                    <tr>
+                                        <td class="column-arrow-button-wrapper">
+                                            {% import "includes/arrow-button.njk" as link %}
+                                            {{ link.arrowButton(orientation, id, 'text-right') }}
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    {% endif %}
+                    
+                </td>
+            </tr>
+        </table>    
+    </td>
+</tr>
+{% endmacro %}

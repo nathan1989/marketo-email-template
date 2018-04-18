@@ -1,0 +1,42 @@
+{# 
+    Hero module b (background image with caption) 
+#}
+
+{% macro bgImage(id) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="Background image with caption">
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width banner-wrap">
+            <tr>
+                <td background="${heroBackgroundImage}" bgcolor="#394C59" width="600" height="340" class="banner-image">
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width: 600px;height:340px;">
+                    <v:fill type="tile" src="${heroBackgroundImage}" color="#394C59" />
+                    <v:textbox inset="0,0,0,0">
+                <![endif]-->
+                <a href="${heroBackgroundLink}" class="banner-link">
+                    <div>
+                        <table cellpadding="0" cellspacing="0" border="0" class="banner-table banner-type-{{ type }}">
+                            <tr>
+                                <td class="mktoText banner-text" id="{{ id }}-text" mktoname="Text">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                        <tr>
+                                            <td class="h1 banner-heading">
+                                                On point
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:rect>
+                <![endif]-->
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

@@ -1,0 +1,15 @@
+{#
+    Border button
+#}
+{% macro borderButton(orientation, id, thisId) %}
+    <table cellpadding="0" cellspacing="0" border="0" align="{{ orientation }}">
+        <tr>
+            <td valign="middle" class="mktoText body text-center button" id="{{ id }}{% if thisId %}-{{ thisId }}{% endif %}-border-button"
+                mktoname="Border button">
+                <a href="#" class="button-link">
+                    <font>More information</font>
+                </a>
+            </td>
+        </tr>
+    </table>
+{% endmacro %}

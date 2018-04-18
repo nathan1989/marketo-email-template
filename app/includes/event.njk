@@ -1,0 +1,64 @@
+{# 
+    Event
+ #}
+ {% macro event(id, type = "single", hidden = false) %}
+ <tr class="mktoModule" id="{{ id }}" mktoname="Event"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width event">
+            <tr>
+                <td class="event-inner">
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="{% if type == 'single' %}date{% else %}multiple-date{% endif %}">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                    <tr>
+                                        <td class="mktoText h1 {% if type == 'single' %}heading{% else %}multiple-heading{% endif %}" id="{{ id }}-day" mktoname="Day">
+                                            {% if type == 'single' %}
+                                                12
+                                            {% else %}
+                                                16-22
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mktoText text-center subheading" id="{{ id }}-month" mktoname="Month">
+                                            January
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="{% if type == 'single' %}gap{% else %}multiple-gap{% endif %}"></td>
+                            <td class="details">
+                                <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width">
+                                    <tr>
+                                        <td class="icons">
+                                            <img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/icon-pin.png" alt="" class="icon-image">
+                                        </td>
+                                        <td class="mktoText details-cell" id="{{ id }}-city" mktoname="City">
+                                            Quality Hotel Parnell, 20 Gladstone Road, Parnell, Auckland
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icons">
+                                            <img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/icon-circle-info.png" alt="" class="icon-image">
+                                        </td>
+                                        <td class="mktoText details-cell" id="{{ id }}-time-location" mktoname="Time and location">
+                                            <strong>Day 1</strong> - 10:00am-5:00pm<br><strong>Day 2</strong> - 8:30am-3:00pm
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icons"></td>
+                                        <td class="mktoText" id="{{ id }}-details" mktoname="Details">
+                                            <em>Parking is available at the venue</em>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+ </tr>
+{% endmacro %}

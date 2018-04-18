@@ -1,0 +1,30 @@
+{# Text block header #} {% macro textBlockHeader(id, heading, subheading, text) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="Text block header">
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width">
+            <tr>
+                <td class="text-block-header">
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="text-block-header-inner">
+                                <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width">
+                                    <tr>
+                                        <td class="header-wrap">
+                                            <span class="mktoText h1" id="{{ id }}-heading" mktoname="Heading">{{ heading }} <span class="text-block-subheading">{{ subheading }}</span></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mktoText text" id="{{ id }}-text" mktoname="Text">
+                                            Free <strong>Accidental Death Cover</strong> Anniversary
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

@@ -1,0 +1,63 @@
+// globals
+$html-bg: #fff;
+$container-bg: transparent;
+
+// body
+$body-color: #333 !default;
+$body-bg: transparent;
+$body-font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+$body-max-width: 600px;
+$body-font-size: 18px;
+$body-line-height: 24px;
+$body-font-size-small: 16px;
+$body-letter-spacing: 0;
+$body-padding: 0 10px;
+
+// headings
+$heading-font-family: $body-font-family;
+$heading-color: #394C59 !default;
+$subheading-color: #394C59 !default;
+
+$h1-font-weight: 900;
+$h1-font-size: 56px;
+$h1-line-height: 48px;
+
+$h2-font-weight: 400;
+$h2-font-size: 36px;
+$h2-line-height: 36px;
+
+$h3-font-weight: 900;
+$h3-font-size: 40px;
+$h3-line-height: 35px;
+
+$h4-font-weight: 400;
+$h4-font-size: 20px;
+$h4-line-height: 25px;
+
+$subheading-font-weight: 400;
+$subheading-font-size: 20px;
+$subheading-line-height: 25px;
+
+// button
+$button-font-size: 16px;
+$button-line-height: $body-line-height;
+$button-letter-spacing: -.01px;
+$button-padding: 4px 21px;
+$button-font-weight: 400;
+$button-border-color: #5ABE85 !default;
+$button-color: #5ABE85 !default;
+
+// link
+$link-text-decoration: underline;
+
+// layout
+$column-bg: #fff;
+
+// sizes
+$gutter: 40px;
+$gutter-small: 10px;
+
+// marketo
+// change this variable to toggle display of hidden modules. 
+// These modules won't appear on a email editor view by default, but can added in from the marketo modules list
+$hide-hidden-modules: false;

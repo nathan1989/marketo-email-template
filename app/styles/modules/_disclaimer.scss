@@ -1,0 +1,47 @@
+.disclaimer {
+    padding: 21px $gutter 30px;
+    @media (max-width: $body-max-width) {    
+        padding-left: $gutter-small!important;
+        padding-right: $gutter-small!important;
+    }
+
+    .disclaimer-text {
+        font-size: 14px;
+        color: #a7a7a7;
+        text-align: center;
+        @media (max-width: $body-max-width) {
+            font-size: 14px!important;
+        }
+    }
+
+    .disclaimer-links {
+        .link-one {
+            padding-right: 31px;
+        }
+        @media (max-width: $body-max-width) {
+            td {
+                display: block!important;
+                width: 100%!important;
+                padding: 0!important;
+            }
+        }
+    }
+
+    .email-row {
+        padding-top: 20px;
+    }
+
+    .info-row {
+        padding-top: 21px;
+        font-size: 12px;
+        line-height: 15px;
+        @media (max-width: $body-max-width) {
+            font-size: 12px!important;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        font-weight: 400;
+    }
+}

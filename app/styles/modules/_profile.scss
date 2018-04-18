@@ -1,0 +1,153 @@
+.profile {
+    background-color: $profile-background-color;
+    td,
+    .full-width {
+        vertical-align: middle;
+    }
+    .text-td {
+        width: 300px;
+        @media (max-width: $body-max-width) {
+            order: 2;
+        }
+    }
+
+    .text-border {
+        height: 24px;
+        @media (max-width: $body-max-width) {
+            height: 0!important;
+        }
+    }
+
+    .text-table-wrapper {
+        @media (max-width: $body-max-width) {
+            padding: 24px 20px!important;
+        }
+    }
+
+        .text-inner-table {
+            .heading,
+            .text {
+                color: $profile-color;
+            }
+            .heading {
+                font-size: 30px;
+                line-height: 30px;
+                font-weight: 800;
+                @media (max-width: $body-max-width) {
+                    font-size: 30px!important;
+                    line-height: 23px!important;
+                }
+            }
+            .text {
+                font-size: 14px;
+                font-style: italic;
+                @media (max-width: $body-max-width) {
+                    font-size: 14px!important;
+                    line-height: 26px!important;
+                }
+            }
+            .preheading {
+                color: #c3c3c3;
+                font-size: 17px;
+                line-height: 17px;
+                letter-spacing: 0.1px;                
+                @media (max-width: $body-max-width) {
+                    font-size: 17px!important;
+                    letter-spacing: 0.1px!important;
+                    line-height: 21px!important;
+                }
+            }
+            .inner-text {
+                width: 290px;
+            }
+            .inner-gap {
+                width: 50px;
+                @media (max-width: $body-max-width) {
+                    width: 1px!important;
+                }
+            }
+        }
+
+    .image {
+        width: 300px;
+        @media (max-width: $body-max-width) {
+            order: 1;
+        }
+    }
+
+    .text-td,
+    .image {
+        @media (max-width: $body-max-width) {
+            text-align: center!important;
+            width: 100%!important;
+            display: block!important;            
+        }
+    }
+
+    .profile-inner {
+        @media (max-width: $body-max-width) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.profile-left {
+    .text-inner-table {
+        .inner-text {
+            padding: 16px 0 16px 16px;
+            border-left: 6px solid $profile-border-color;
+        }
+        table {
+            text-align: left;
+        }
+    }
+}
+
+.profile-right {
+    .text-inner-table {
+        .inner-text {
+            padding: 16px 16px 16px 0;
+            border-right: 6px solid $profile-border-color;
+            @media (max-width: $body-max-width) {
+                border-right: none!important;
+                border-left: 6px solid $profile-border-color!important;
+            }
+        }
+        table {
+            text-align: right;
+            @media (max-width: $body-max-width) {
+                text-align: left!important;
+            }
+        }
+    }
+}
+
+.profile-left,
+.profile-right {
+    .text-inner-table {
+        .inner-text {
+            @media (max-width: $body-max-width) {
+                padding: 2px 0 2px 16px!important;
+            }
+        }
+    }
+}
+
+.theme-two {
+    .profile {
+        background: #0F5D64!important;
+        .text-inner-table .inner-text {
+            border-color: #478899!important; 
+        }
+    }
+}
+
+.theme-three {
+    .profile {
+        background: #478899!important;
+        .text-inner-table .inner-text {
+            border-color: #394C59!important; 
+        }
+    }
+}

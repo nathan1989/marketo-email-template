@@ -1,0 +1,96 @@
+.column-wrapper {
+    padding: $gutter-small 0;
+}
+
+.column-heading {
+    padding: $gutter $gutter 30px $gutter;
+    @media (max-width: $body-max-width) {            
+        padding: $gutter-small $gutter-small 15px $gutter-small;
+    }
+}
+
+.column-banner-wrapper {
+    padding: 0 $gutter-small;
+}
+
+.column-image-wrapper {
+    padding-bottom: 22px;
+    text-align: center;
+}
+
+.one-col {
+    padding-left: $gutter;
+    padding-right: $gutter;
+    @media (max-width: $body-max-width) {
+        padding-left: $gutter-small!important;
+        padding-right: $gutter-small!important;
+    }
+}
+
+.two-col-left {
+    width: 50%;
+    padding-left: $gutter;
+    padding-right: 16px;
+    @media (max-width: $body-max-width) {
+        padding-left: $gutter-small!important;
+    }
+}
+
+.two-col-right {
+    width: 50%;
+    padding-right: $gutter;
+    padding-left: 16px;
+    @media (max-width: $body-max-width) {
+        padding-right: $gutter-small!important;
+    }
+}
+
+.three-col-left,
+.three-col-center,
+.three-col-right {
+    width: 33.33%;
+}
+
+.three-col-left {
+    padding-left: $gutter;
+    padding-right: 8px;
+    @media (max-width: $body-max-width) {
+        padding-left: $gutter-small!important;
+    }
+}
+
+.three-col-center {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.three-col-right {
+    padding-right: $gutter;
+    padding-left: 8px;
+    @media (max-width: $body-max-width) {
+        padding-right: $gutter-small!important;
+    }
+}
+
+.column-text-wrapper {
+    &.no-image {
+        padding-top: 0;
+    }
+}
+
+.column-button-wrapper {
+    padding-top: 18px;
+}
+
+.column-arrow-button-wrapper {
+    padding-top: 14px;
+
+    @media (max-width: $body-max-width) {
+        td {
+            width: auto!important;
+            display: table-cell!important;
+            padding: 0 7px 0 0!important;
+            vertical-align: middle!important;
+        }
+    }
+}

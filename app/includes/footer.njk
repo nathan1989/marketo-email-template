@@ -1,0 +1,155 @@
+{# 
+    Footer
+ #}
+{% macro footer(id = 'footer', hasCta = false, hidden = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width footer{% if hasCta %} cta-footer{% endif %}">
+            <tr>
+                <td class="{% if hasCta %} cta-footer-wrapper{% else %} footer-wrapper{% endif %}">
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        {% if hasCta %}
+                        <tr>
+                            <td class="cta-table-wrapper">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width column-grid">                                    
+                                    <tr>
+
+                                        <td class="cta-column">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width body-text text-center">
+                                                <tr>
+                                                    <td class="cta-image">
+                                                        <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/icon-read-more.png" alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-heading" id="{{ id }}-external" mktoname="External heading">
+                                                        Read more
+                                                    </td>                                                
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-link" id="{{ id }}-external-link" mktoname="External link">
+                                                        <a href="#" class="link-reset-white"><font>Visit noodle</font></a>                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td width="10"></td>
+
+                                        <td class="cta-column">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width body-text text-center">
+                                                <tr>
+                                                    <td class="cta-image">
+                                                        <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/icon-paper-plane.png" alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-heading" id="{{ id }}-share" mktoname="Share heading">
+                                                        Share with us
+                                                    </td>                                                
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-link" id="{{ id }}-share-link" mktoname="Share link">
+                                                        <a href="#" class="link-reset-white"><font>Send an email</font></a>                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td width="10"></td>
+
+                                        <td class="cta-column">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width body-text text-center">
+                                                <tr>
+                                                    <td class="cta-image cta-search">
+                                                        <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/icon-search.png" alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-heading" id="{{ id }}-question" mktoname="Question heading">
+                                                        Sonata
+                                                    </td>                                                
+                                                </tr>
+                                                <tr>
+                                                    <td class="mktoText cta-link" id="{{ id }}-question-link" mktoname="Question link">
+                                                        <a href="#" class="link-reset-white"><font>Find out more</font></a>                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td class="logo-wrapper">
+                                <div class="mktoImg" id="{{ id }}-logo" mktoname="Logo" mktoImgLink="http://www.fidelitylife.co.nz/">  
+                                    <a><img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/logo-white.png" alt=""></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width column-grid">
+                                    <tr>
+                                        <td>                                         
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                                <tr>
+                                                    <td>
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="mktoText body-text footer-info footer-numbers" id="{{ id }}-numbers" mktoname="Numbers">
+                                                                    Protecting the NZ way of life
+                                                                    <br>
+                                                                    <span class="link-reset-white">
+                                                                        <font color="#FFF">09 373 4914</font>
+                                                                    </span>&nbsp;|&nbsp;
+                                                                    <span class="link-reset-white">
+                                                                        <font color="#FFF">0800 88 22 88</font>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mktoText body-text footer-info" id="{{ id }}-links" mktoname="Links">
+                                                                    <a href="mailto:salessupport@fidelitylife.co.nz" class="link-reset-white">
+                                                                    <font>salessupport@fidelitylife.co.nz</font>
+                                                                    </a><br>
+                                                                    <a href="http://fidelitylife.co.nz" class="link-reset-white">
+                                                                    <font>fidelitylife.co.nz</font>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="footer-logos">
+                                                        <table cellpadding="0" cellspacing="0" border="0" align="right">
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="mktoImg" id="{{ id }}-nz-logo" mktoname="Logo" mktoImgLink="http://www.fidelitylife.co.nz/">  
+                                                                        <a><img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/nz-made-logo.png" alt=""></a>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="insurance-logo">
+                                                                    <div class="mktoImg" id="{{ id }}-insurance-logo" mktoname="Logo" mktoImgLink="http://www.fidelitylife.co.nz/">  
+                                                                        <a><img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/insurance-award.png" alt=""></a>
+                                                                    </div>                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>    
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

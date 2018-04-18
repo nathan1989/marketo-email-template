@@ -1,0 +1,16 @@
+{#
+    Button module
+#}
+{% macro buttonModule(orientation, id, isReadMore = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}">
+    <td class="button-module{% if isReadMore %} read-more-module{% endif %}">
+        {% if isReadMore %}
+            {% import "includes/arrow-button.njk" as link %}
+            {{ link.arrowButton(orientation, id, thisId) }}
+        {% else %}
+            {% import "includes/border-button.njk" as button %}
+            {{ button.borderButton(orientation, id) }}
+        {% endif %}
+    </td>
+</tr>
+{% endmacro %}

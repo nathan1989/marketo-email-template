@@ -1,0 +1,86 @@
+html {
+  background-color: $html-bg;
+  height: 100%;
+  max-width: 100%;
+}
+
+body,
+.body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  Margin: 0;
+  padding: $body-padding;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  max-width: 100%;
+}
+
+.body-text,
+.body-text-small {
+  color: $body-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  letter-spacing: $body-letter-spacing;
+  @media (max-width: $body-max-width) {
+    font-size: $body-font-size-small!important;
+  }
+}
+
+.body-text-small {
+  font-size: 16px;
+}
+
+div,
+.no-padding {
+  Margin: 0;
+  padding: 0;
+}
+
+p {
+  Margin: 0;
+  padding: 0;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+ul {
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+table { 
+  mso-table-lspace: 0pt; 
+  mso-table-rspace: 0pt; 
+}
+
+// marketo
+[mktoAddByDefault]{
+  @if $hide-hidden-modules {
+      display: none; 
+      font-size: 0; 
+      max-height: 0; 
+      line-height: 0;
+      mso-hide:all;
+  }
+}

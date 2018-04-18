@@ -1,0 +1,62 @@
+{#
+    Profile image
+#}
+{% macro profileImage(orientation, id, hidden = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td class="module">        
+        <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width profile profile-{{ orientation }}">
+            <tr class="profile-inner">
+                {% if orientation == "left" %}
+                <td class="image">
+                    <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/profile-image-left.png" alt="" class="mktoImg display-block" id="{{  id }}-image" mktoName="Image" width="300">
+                </td>
+                {% endif %}
+                <td class="text-td"> 
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="text-table-wrapper">
+                                <table cellpadding="0" cellspacing="0" border="0" class="full-width text-table">
+                                    <tr>
+                                        <td> 
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width text-inner-table">
+                                                <tr>
+                                                    {% if orientation == "left" %}<td class="inner-gap"></td>{% endif %}
+                                                    <td class="inner-text">
+                                                        <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="mktoText body-text preheading" id="{{ id }}-preheading" mktoname="Preheading">Presenter</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="mktoText body-text heading" id="{{ id }}-heading" mktoname="Heading">{% if orientation == "left" %}Sarah Dye{% else %}Reeta Anthony{% endif %}</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="mktoText body-text text" id="{{ id }}-subheading" mktoname="Subheading">{% if orientation == "left" %}Customer service representative{% else %}Head of claims{% endif %}</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    {% if orientation == "right" %}<td class="inner-gap"></td>{% endif %}
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                {% if orientation == "right" %}
+                <td class="image">
+                    <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/profile-image-right.png" alt="" class="mktoImg display-block" id="{{  id }}-image" mktoName="Image" width="300">
+                </td>
+                {% endif %}
+            </tr>
+        </table>    
+    </td>
+</tr>
+{% endmacro %}

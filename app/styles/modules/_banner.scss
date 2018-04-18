@@ -1,0 +1,104 @@
+ .banner-wrap {
+     td {
+         background-size: cover;
+     }
+
+     .banner-link {
+        color: #fff;
+        text-decoration: none;
+        border: 0;
+        span {
+            color: #fff;
+            text-decoration: none;
+        }
+        .heading-inner {
+            color: $banner-heading-inner;
+        }
+     }
+
+     .banner-image {
+        @media (max-width: $body-max-width) {
+            height: 170px!important;
+        }
+     }
+
+     .banner-heading {
+        font-size: 64px;
+        line-height: 60px;
+        color: #FFFFFF;
+        letter-spacing: -1px;
+        padding: 119px 53px 20px;
+        @media (max-width: $body-max-width) {
+            font-size: 32px!important;
+            line-height: 32px!important;
+            letter-spacing: -0.5px!important;
+            padding: 52px 26px 20px!important;
+        }
+     }
+
+     .banner-subheading {
+        font-size: 56px;
+        color: #5ABE87;
+        letter-spacing: -0.93px;
+        padding-top: 3px;
+        @media (max-width: $body-max-width) {
+            font-size: 28px!important;
+            line-height: 28px!important;
+            letter-spacing: -0.47px!important;
+            text-align: right!important;
+            padding-right: 17px!important;
+            padding-top: 0!important;
+        }
+     }
+ }
+
+ .banner-table {
+    height: 340px;
+    width: 100%;
+    max-width: 100%;
+    @media (max-width: $body-max-width) {
+        height: 170px!important;
+    }
+ }
+
+ .banner-type-b2 {
+    .banner-text {
+        padding: 130px 0 20px;
+        @media (max-width: $body-max-width) {
+            padding: 65px 0 20px!important;
+        }
+    }
+
+    .banner-heading,
+    .banner-subheading {
+        padding: 0 53px;
+        @media (max-width: $body-max-width) {
+            padding: 0 26px!important;
+        }
+    }
+
+    .banner-heading {
+        text-align: left;
+        font-size: 56px;
+        letter-spacing: -0.2px;
+        @media (max-width: $body-max-width) {
+            font-size: 28px!important;
+            line-height: 28px!important;    
+            letter-spacing: -0.1px!important;
+        }
+    }
+
+    .banner-subheading {
+        font-family: $body-font-family;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 33px;
+        color: #fff;
+        letter-spacing: 0;
+        @media (max-width: $body-max-width) {
+            text-align: left!important;
+            font-size: 16px!important;
+            line-height: 16px!important;    
+        }
+    }
+ }

@@ -1,0 +1,21 @@
+{#
+    Heading w/subheading
+#}
+{% macro heading(orientation, id) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}">
+    <td class="heading-module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width column">
+            <tr>
+                <td class="mktoText h2 text-{{ orientation }}" id="{{ id }}-heading" mktoname="Text">
+                    This is a <strong>heading</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="mktoText h4 subheading text-{{ orientation }}" id="{{ id }}-subheading" mktoname="Text">
+                    This is a <strong>subheading</strong>, for extra words
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

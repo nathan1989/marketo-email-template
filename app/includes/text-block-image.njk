@@ -1,0 +1,75 @@
+{#
+    Text block image
+#}
+{% macro textBlockImage(orientation, id, hasBtn = false, hidden = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td id="{{ id }}" class="module">        
+        <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width text-block-image text-block-image-left {% if not hasBtn %}text-block-image-no-button{% endif %}">
+            <tr class="text-block-image-inner">
+                {% if orientation == "left" %}
+                <td class="image">
+                        <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/text-block-image.png" alt="" class="mktoImg display-block" id="{{  id }}-image" mktoName="Image" width="254" height="292">                    
+                </td>
+                {% endif %}
+                <td class="text-td">
+                    <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                        <tr>
+                            <td class="text-td-inner{% if not hasBtn %} text-td-with-text{% endif %}">
+                                <table cellpadding="0" cellspacing="0" border="0" class="body-text full-width text-heading">
+                                    <tr>
+                                        <td> 
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width text-inner-table">
+                                                <tr>
+                                                    <td class="inner-gap"></td>
+                                                    <td class="inner-text">
+                                                        <span class="mktoText body-text heading" id="{{ id }}-heading" mktoname="Heading">This is the title to an <strong>article, event or page</strong>.<br>It can be long, or short. </span>                                                        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" class="full-width text-inner-table">
+                                                <tr>
+                                                    <td class="inner-other-text">
+                                                        <table cellpadding="0" cellspacing="0" border="0" class="full-width">
+                                                            {% if hasBtn %}
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="mktoText body-text subheading" id="{{ id }}-subheading" mktoname="Subheading">How to protect your lifestyle is one of the most important decisions you'll ever make.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="22"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>                                                                                   
+                                                                    {% import "includes/border-button.njk" as button %}
+                                                                    {{ button.borderButton('left', id, 'text-left') }}
+                                                                </td>
+                                                            </tr>
+                                                            {% else %}
+                                                            <tr>
+                                                                <td class="mktoText body-text" id="{{ id }}-text" mktoname="Text">
+                                                                    Motivation can take you far, but it can take you even further if you first find your vision.
+                                                                </td>
+                                                            </tr>
+                                                            {% endif %}
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>                                            
+                                        </td>
+                                    </tr>
+                                </table>                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                {% if orientation == "right" %}
+                <td class="image">
+                    <img src="https://info.fidelitylife.nz/rs/451-RXL-411/images/text-block-image.png" alt="" class="mktoImg display-block" id="{{  id }}-image" mktoName="Image" width="254" height="292">                    
+                </td>
+                {% endif %}
+            </tr>
+        </table>    
+    </td>
+</tr>
+{% endmacro %}

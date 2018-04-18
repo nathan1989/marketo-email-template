@@ -1,0 +1,99 @@
+{#
+    table
+#}
+{% macro table(id, type = "normal", hidden = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}"{% if hidden %} mktoAddByDefault="false"{% endif %}>
+    <td valign="middle" class="mktoText table-wrapper" id="{{ id }}-table" mktoname="Table">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width table-reset table {{ type }}-table">
+            {% if type == "normal" %}
+            <thead>
+                <th class="body-text first">Criteria</th>
+                <th class="body-text">Fiji targets</th>
+                <th class="body-text">NY targets</th>
+                <th class="body-text">Your progress</th>
+            </thead>
+            <tr>
+                <td class="body-text first"><strong>API</strong> - risk, health and investment</td>
+                <td class="body-text">$90,000</td>
+                <td class="body-text">$120,000</td>
+                <td class="body-text">$XXX,XXX</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>API</strong> - investment only</td>
+                <td class="body-text">$100,000</td>
+                <td class="body-text">$140,000</td>
+                <td class="body-text">$XXX,XXX</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>API</strong> - MDC</td>
+                <td class="body-text light-text">N/A</td>
+                <td class="body-text">$110,000</td>
+                <td class="body-text">$XXX,XXX</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>API</strong> - maximum nib</td>
+                <td class="body-text">$30,000</td>
+                <td class="body-text">$50,000</td>
+                <td class="body-text">$XXX,XXX</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>Persistency</strong></td>
+                <td class="body-text">90%</td>
+                <td class="body-text">90%</td>
+                <td class="body-text light-text">Available shortly</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>Policy counts</strong></td>
+                <td class="body-text">15</td>
+                <td class="body-text">20</td>
+                <td class="body-text light-text">Available shortly</td>
+            </tr>
+            {% else  %}
+            <thead>
+                <th class="body-text first">Adviser ID</th>
+                <th class="body-text">Annual Premium</th>
+            </thead>
+            <tr>
+                <td class="body-text first">Fidelity Life Retail</td>
+                <td class="body-text">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first strong-border-bottom">Fidelity Life Group</td>
+                <td class="body-text strong-border-bottom">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first strong-border-bottom"><strong>Current Total</strong></td>
+                <td class="body-text strong-border-bottom">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first">Balance remaining by 30.06.2018</td>
+                <td class="body-text">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first"><strong>Incentive Goal</strong></td>
+                <td class="body-text">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first">Persistency</td>
+                <td class="body-text">$0</td>
+            </tr>
+            <tr>
+                <td class="body-text first">Policy Count</td>
+                <td class="body-text">$0</td>
+            </tr>
+            {% endif %}
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" class="ful-width">
+            <tr>
+                <td class="body-text table-extra">
+                    {% if type == "normal" %}
+                        Qualification period closes on 30 June 2018. Persistency and policy count data will be made available shortly. Full terms and conditions, including qualification criteria, can be found <a class="#">here</a>
+                    {% else  %}
+                        Lorem ipsum dolor sit amet 2 February 2018
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endmacro %}

@@ -1,0 +1,88 @@
+// headings
+.h1 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $h1-font-weight;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+.h2 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $h2-font-weight;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  @media (max-width: $body-max-width) {
+    font-size: 24px!important;
+    letter-spacing: -0.07px!important;
+    line-height: 24px!important;
+  }
+}
+
+.h3 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $h3-font-weight;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+}
+
+.h4 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $h4-font-weight;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  @media (max-width: $body-max-width) {
+    font-size: 18px!important;
+    letter-spacing: -0.05px!important;
+    line-height: 18px!important;
+  }
+}
+
+.subheading {
+  color: $subheading-color;
+  font-family: $heading-font-family;
+  font-weight: $subheading-font-weight;
+  font-size: $subheading-font-size;
+  line-height: $subheading-line-height;
+  letter-spacing: -.11px;
+}
+
+// helpers
+.white-text {
+  color: #fff;
+}
+
+.dark-text {
+  color: #444;
+}
+
+.grey-text {
+  color: #a6a8ab;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+// links
+a {
+  color: $link-color;
+  text-decoration: $link-text-decoration;
+  &:link {
+    text-decoration: $link-text-decoration;
+  }
+}
+
+.link-reset-white {
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  span,
+  &:link {
+    color: #fff;
+    text-decoration: none;
+  }
+}

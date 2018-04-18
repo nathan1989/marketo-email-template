@@ -1,0 +1,41 @@
+.header-top {
+    background-color: $column-bg;
+    padding: 26px $gutter;
+    @media (max-width: $body-max-width) {
+        padding: 15px $gutter-small 11px!important;
+    }
+    .logo-wrapper {
+        vertical-align: middle;
+        text-align: center;
+        @media (max-width: $body-max-width) {
+            img {
+                width: 147px!important;
+                height: 30px!important;
+            }
+        }
+    }    
+    .date {
+        padding-top: 5px;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 600;
+        color: #394C59;
+        @media (max-width: $body-max-width) {
+            padding-top: 0!important;
+            font-size: 14px!important;
+        }
+    }
+    .logo-wrapper,
+    .date {
+        min-width: 240px;
+    }
+}
+
+.banner-image {
+    width: $body-max-width;
+    max-width: $body-max-width;
+    @media (max-width: $body-max-width) {
+        width: 100%!important;
+        max-width: 100%!important;    
+    }
+}

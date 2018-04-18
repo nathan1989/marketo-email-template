@@ -1,0 +1,199 @@
+.text-block,
+.text-block-header {
+    .h1 {
+        color: $heading-color;
+    }
+
+    .text {
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: -.1px;
+    }
+}
+
+.text-block {
+    padding: $gutter;
+    .text {
+        color: $text-block-text;
+    }
+    @media (max-width: $body-max-width) {
+        padding: $gutter-small !important;
+
+        .h1 {
+            padding-bottom: $gutter-small!important;
+        }
+
+        .h1,
+        .text {
+            width: 100%!important;
+            display: block!important;
+            text-align: center!important;
+        }
+    }
+}
+
+.text-block-header {
+    background: $text-block-header-background-color;
+    padding: 42px 35px;
+    @media (max-width: $body-max-width) {
+        padding: 20px!important;
+    }
+    .text-block-header-inner {
+        border-left: 6px solid $event-border-color;
+        padding: 23px 0;
+        padding-left: 29px;
+        @media (max-width: $body-max-width) {
+            padding: 7px 14px!important;
+        }
+    }
+    .h1 {
+        color: $text-block-header-heading-color;
+        @media (max-width: $body-max-width) {
+            font-size: 28px!important;
+            line-height: 28px!important;
+        }
+    }
+    .text-block-subheading {
+        padding-top: 4px;
+        color: $text-block-header-subheading-color;
+    }
+    .text {
+        color: #fff;
+        padding-top: 7px;
+        @media (max-width: $body-max-width) {
+            padding-top: 4px!important;
+            font-size: 16px!important;
+            line-height: 16px!important;
+        }
+    }
+}
+
+.theme-two {
+    .text-block-header {
+        background: #0F5D64!important;
+        .text-block-header-inner {
+            border-color: #478899!important;
+        }
+    }
+}
+
+.theme-three {
+    .text-block-header {
+        background: #478899!important;
+        .text-block-header-inner {
+            border-color: #394C59!important;
+        }
+    }
+}
+
+.theme-two,
+.theme-three {
+    .text-block-header {
+        .h1,
+        .text-block-subheading {
+            color: #fff!important;
+        }
+    }
+}
+
+.text-block-header-image {
+    background: $text-block-header-background-color;
+
+    .heading-section {
+        width: 400px;
+        @media (max-width: $body-max-width) {
+            width: auto!important;
+        }
+    }
+
+    .header-wrap {
+        padding: $gutter 0 $gutter $gutter;
+
+        @media (max-width: $body-max-width) {
+            padding: 29px 0 17px 20px !important;
+        }
+    }
+
+    .heading-td {
+        padding-left: 20px;
+        mso-line-height-rule: exactly;
+        line-height: 70%;
+    }
+
+    .heading,
+    .for {
+        color: #ffffff;
+    }
+
+    .heading {
+        font-size: 65px;
+        @media (max-width: $body-max-width) {
+            font-size: 42px!important;
+            line-height: 20px!important;
+            letter-spacing: -0.66px!important;
+        }
+    }
+
+    .subheading-td {
+        mso-line-height-rule: exactly;
+        line-height: 55%;
+    }
+
+    .for {
+        font-size: 45px;
+        vertical-align: super;
+        @media (max-width: $body-max-width) {
+            font-size: 27px!important;
+            line-height: 20px!important;
+            letter-spacing: -0.6px!important;
+        }
+    }
+
+    .text-block-subheading {
+        font-size: 60px;
+        line-height: 35px;
+        color: $event-border-color;
+        @media (max-width: $body-max-width) {
+            font-size: 36px!important;
+            line-height: 25px!important;
+            letter-spacing: -0.6px!important;
+        }
+    }
+
+    .line-gap {
+        height: 20px;
+        @media (max-width: $body-max-width) {
+            height: 8px!important;
+        }
+    }
+
+    .line-width {
+        width: 100px;
+        height: 2px;
+        @media (max-width: $body-max-width) {
+            width: 60px!important;
+        }
+    }
+
+    .line-td {
+        border-bottom: 2px solid $event-border-color;
+        height: 2px;
+        width: 161px;
+        @media (max-width: $body-max-width) {
+            width: 80px!important;
+        }
+    }
+
+    .image-wrap {
+        width: 200px;
+        @media (max-width: $body-max-width) {
+            width: 116px!important;
+        }
+    }
+
+    @media (max-width: $body-max-width) {
+        .heading-section {
+            padding-bottom: $gutter-small!important;
+        }
+    }
+}

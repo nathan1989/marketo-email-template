@@ -1,0 +1,25 @@
+{# 
+    Video
+#}
+{% macro video(id, hasCaption = false) %}
+<tr class="mktoModule" id="{{ id }}" mktoname="{{ id | replace("-", " ") | capitalize }}" mktoAddByDefault="false">
+    <td class="module">
+        <table cellpadding="0" cellspacing="0" border="0" class="full-width column">
+            <tr>
+                <td>
+                    <div class="mktoImg" id="{{ id }}-header-logo" mktoname="Logo" mktoImgLink="http://www.fidelitylife.co.nz/">  
+                        <a><img src="http://info.fidelitylife.nz/rs/451-RXL-411/images/video.png" alt="" width="600"></a>
+                    </div>
+                </td>
+            </tr>
+            {% if hasCaption %}
+            <tr>
+                <td class="mktoText padding-big-all body-text" id="{{ id }}-text" mktoname="Text">
+                    Fusce viverra turpis metus, vitae egestas ligula lacinia eget. Nam quam tortor, consequat sed orci et.
+                </td>
+            </tr>
+            {% endif %}
+        </table>    
+    </td>
+</tr>
+{% endmacro %}

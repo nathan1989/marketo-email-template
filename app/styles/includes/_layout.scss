@@ -1,0 +1,92 @@
+table {
+  td {
+    vertical-align: top;
+  }
+}
+
+.container {
+  Margin: 0 auto 20px;
+  padding: 0;
+  width: $body-max-width;
+  max-width: $body-max-width;
+  background: $container-bg;
+
+  @media (max-width: $body-max-width) {
+    width: 100%!important;
+    margin-bottom: 0!important;
+  }
+}
+
+.module {
+  padding: 10px 0;
+  @media (max-width: $body-max-width) {
+    padding: 5px 0!important;
+  }
+}
+
+.column {
+  background-color: $column-bg;
+
+  &.column-bg {
+      background-color: $heading-color;
+
+      .mktoText,
+      .button-link span, 
+      .button-link font {
+          color: white;
+      }
+
+      .button {
+          border-color: white;
+      }
+  }
+}
+
+.column-grid {
+  @media only screen and (max-width:$body-max-width) {
+    td {
+      display: block!important;
+      width: 100%!important;
+      padding: 0 0 $gutter-small!important;
+    }
+    .button {
+      width: auto!important;
+      padding: $button-padding!important;
+    }
+  }
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.heading-module {
+  padding: 20px $gutter;
+  @media (max-width: $body-max-width) {
+    padding: 12px 12px 13px!important;
+  }
+
+  .subheading {
+    padding-top: 9px;
+  }
+}
+
+.heading-module-small {
+  padding: 7px $gutter;
+  @media (max-width: $body-max-width) {
+    padding: 12px 12px 13px!important;
+  }
+}
+
+.generic-text {
+  padding: 22px $gutter;
+  @media (max-width: $body-max-width) {
+    padding: 22px $gutter-small!important;
+  }
+}

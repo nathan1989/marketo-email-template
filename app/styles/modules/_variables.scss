@@ -1,0 +1,176 @@
+// themes
+// 3 color themes, to change the theme, update $current-theme to the chosen theme.
+// The styles should be applied globally as per design
+
+$theme-1: (
+  heading-color: #394C59,
+  link-color: #5ABE87,
+  date-color: #394C59,
+  text-block-header-background-color: #394C59,
+  text-block-header-heading-color: #fff,
+  text-block-header-subheading-color: #5ABE87,
+
+  banner-heading-inner: #5ABE87,
+
+  profile-background-color: #394C59,
+  profile-color: #fff,
+  profile-border-color: #5ABE87,
+
+  text-block-heading: #394C59,
+  text-block-text: #5ABE87,
+
+  text-block-image-heading-color: #394C59,
+  text-block-image-border-color: #5ABE87,
+
+  event-border-color: #5ABE87,
+
+  button-border-color: #5CBE85,
+);
+
+$theme-2: (
+  heading-color: #0F5D64,
+  link-color: #478899,
+  date-color: #0F5D64,
+  text-block-header-background-color: #0F5D64,
+  text-block-header-heading-color: #fff,
+  text-block-header-subheading-color: #fff,
+
+  banner-heading-inner: #fff,
+
+  profile-background-color: #0F5D64,
+  profile-color: #fff,
+  profile-border-color: #478899,
+
+  text-block-heading: #384F59,
+  text-block-text: #5ABE87,
+
+  text-block-image-heading-color: #384F59,
+  text-block-image-border-color: #478899,
+
+  event-border-color: #478899,
+
+  button-border-color: #478899,
+);
+
+$theme-3: (
+  heading-color: #478899,
+  link-color: #394C59,
+  date-color: #000000,
+  text-block-header-background-color: #478899,
+  text-block-header-heading-color: #fff,
+  text-block-header-subheading-color: #fff,
+
+  banner-heading-inner: #fff,
+
+  profile-background-color: #478899,
+  profile-color: #fff,
+  profile-border-color: #394C59,
+
+  text-block-heading: #478899,
+  text-block-text: #A0CED8,
+
+  text-block-image-heading-color: #478899,
+  text-block-image-border-color: #394C59,
+
+  event-border-color: #394C59,
+
+  button-border-color: #394C59,
+);
+
+$theme-4: (
+  heading-color: #000000,
+  date-color: #000000,
+  text-block-header-background-color: #ED1B34,
+  text-block-header-heading-color: #000000,
+  text-block-header-subheading-color: #fff,
+
+  profile-background-color: #ED1B34,
+  profile-color: #fff,
+  profile-border-color: #000000,
+
+  text-block-heading: #000000,
+  text-block-text: #ED1B34,
+
+  text-block-image-heading-color: #ED1B34,
+  text-block-image-border-color: #ED1B34,
+
+  event-border-color: #ED1B34,
+
+  button-border-color: #ED1B34,
+);
+
+$theme-5: (
+  heading-color: #384F59,
+  date-color: #384F59,
+  text-block-header-background-color: #59BF87,
+  text-block-header-heading-color: #384F59,
+  text-block-header-subheading-color: #fff,
+
+  profile-background-color: #59BF87,
+  profile-color: #fff,
+  profile-border-color: #384F59,
+
+  text-block-heading: #384F59,
+  text-block-text: #59BF87,
+
+  text-block-image-heading-color: #59BF87,
+  text-block-image-border-color: #59BF87,
+
+  event-border-color: #59BF87,
+
+  button-border-color: #59BF87,
+);
+
+$theme-6: (
+  heading-color: #0f5d64,
+  date-color: #000000,
+  text-block-header-background-color: #0f5d64,
+  text-block-header-heading-color: #0f5d64,
+  text-block-header-subheading-color: #fff,
+
+  profile-background-color: #A0CFD8,
+  profile-color: #fff,
+  profile-border-color: #0f5d64,
+
+  text-block-heading: #0f5d64,
+  text-block-text: #0f5d64,
+
+  text-block-image-heading-color: #0f5d64,
+  text-block-image-border-color: #0f5d64,
+
+  event-border-color: #0f5d64,
+
+  button-border-color: #0f5d64,
+);
+
+// change this variable to either $theme-1 (customer), $theme-2 (internal) or $theme-3 (adviser) to update the template theme
+$current-theme: $theme-3;
+
+// $body-color: map-get($current-theme, heading-color);
+$heading-color: map-get($current-theme, heading-color);
+$link-color: map-get($current-theme, link-color);
+$subheading-color: map-get($current-theme, heading-color);
+
+$date-color: map-get($current-theme, date-color);
+
+$text-block-header-background-color: map-get($current-theme, text-block-header-background-color);
+$text-block-header-heading-color: map-get($current-theme, text-block-header-heading-color);
+$text-block-header-subheading-color: map-get($current-theme, text-block-header-subheading-color);
+$banner-heading-inner: map-get($current-theme, banner-heading-inner);
+
+$profile-background-color: map-get($current-theme, profile-background-color);
+$profile-color: map-get($current-theme, profile-color);
+$profile-border-color: map-get($current-theme, profile-border-color);
+
+$text-block-heading: map-get($current-theme, text-block-heading);
+$text-block-text: map-get($current-theme, text-block-text);
+
+$text-block-image-heading-color: map-get($current-theme, text-block-image-heading-color);
+$text-block-image-border-color: map-get($current-theme, text-block-image-border-color);
+
+$event-border-color: map-get($current-theme, event-border-color);
+
+$button-border-color: map-get($current-theme, button-border-color);
+
+// custom overrides
+$button-color: $button-border-color;

@@ -1,0 +1,84 @@
+.table-reset {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-wrapper {
+  padding: 20px $gutter;
+  @media (max-width: $body-max-width) {
+    padding: 20px!important;
+  }
+}
+
+.table {
+  th,
+  td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 20px;
+    @media (max-width: $body-max-width) {
+      line-height: 20px!important;
+    }
+
+    &:nth-child(even){
+      background: #F0F0F0;
+    }
+  }
+  th {
+    font-weight: bold;
+    padding: 12px 19px;
+    @media (max-width: $body-max-width) {
+        padding-left: 8px!important;
+        padding-right: 8px!important;
+    }
+  }
+
+  td {
+    padding: 19px;
+    @media (max-width: $body-max-width) {
+        padding-left: 8px!important;
+        padding-right: 8px!important;
+    }
+  }
+
+  .first {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .light-text {
+    color: #8f8f8f;
+  }
+
+  .strong-border-bottom {
+    border-bottom: 1px solid #333;
+  }
+}
+
+.table-extra {
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 15px;
+  @media (max-width: $body-max-width) {
+    font-size: 12px!important;
+  }
+
+  a,
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.normal-table,
+.twocol-table {
+  td,
+  th {
+    @media (max-width: $body-max-width) {
+      padding-left: 5px!important;
+      padding-right: 5px!important;
+      font-size: 12px!important;
+    }
+  }
+}
